@@ -10,8 +10,6 @@ TAR=$(firstword $(wildcard $(foreach t,gtar tar,$(addsuffix bin/$t,/usr/local/ /
 PGP=63B82EB1
 AUTHOR=David C Black
 
-PDFUTIL=/usr/local/Cellar/perl/5.34.0_1/bin/pod2pdf
-
 .PHONY: info help install sign sig tar
 
 help:
@@ -50,7 +48,7 @@ sign sig: ${SRC}
 
 %.pdf: %.pl
 	VER=$(shell perl -ne ${VERSIONSCRIPT} $*.pl);\
-	${PDFUTIL} logscan.pl > logscan-$$VER.pdf
+	pod2pdf logscan.pl > logscan-$$VER.pdf
 	mv $*.pl.pdf $*.pdf
 
 # END OF Makefile
