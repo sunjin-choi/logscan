@@ -46,7 +46,7 @@ sign sig: ${SRC}
 	rm -f LICENSE.asc;  gpg -sat -u ${PGP} LICENSE
 	rm -f MANIFEST.asc; gpg -sat -u ${PGP} MANIFEST
 
-%.pdf: %.pl
+logscan.pdf: logscan.pl
 	VER=$(shell perl -ne ${VERSIONSCRIPT} $*.pl);\
 	pod2pdf logscan.pl > logscan-$$VER.pdf
 	mv $*.pl.pdf $*.pdf
