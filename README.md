@@ -3,9 +3,10 @@
 Manual fork of DC Black's EDA log parser tool from [link](https://github.com/dcblack/logscan)
 
 I won't necessarily change anything but will attempt to:
-* upload the documentations (sooo hard to compile perl-docs from decades ago)
+* upload the documentations (sooo hard to compile perl-docs from decades ago and there's no pdf anywhere)
 * add any useful plugins
 
+If you really want to compile the pdf by yourself, try looking into [pod2pdf](https://metacpan.org/dist/pod2pdf) and follow the instructions "Install Instructions". Don't forget to install all your dependencies through the same platform (especially PDF::API2). Fingers crossed!
 
 # LOGSCAN: A Configurable Error Management Utility
 
